@@ -34,8 +34,8 @@ function makemap () {
         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
         `, [myTiles.transparency16,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.floorDarkDiamond,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenInnerSouthEast,sprites.dungeon.greenInnerNorthWest,sprites.dungeon.greenInnerNorthEast,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenOuterSouth0,sprites.dungeon.floorDark2,sprites.dungeon.greenOuterEast0,sprites.dungeon.floorDark0,sprites.dungeon.floorDark5,sprites.dungeon.floorDark3,sprites.dungeon.floorDark1,sprites.dungeon.greenSwitchUp,sprites.dungeon.floorLight2], TileScale.Sixteen))
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchUp, function (sprite, location) {
-    tiles.setTileAt(tiles.getTileLocation(8, 11), sprites.dungeon.floorDarkDiamond)
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
+    tiles.setTileAt(tiles.getTileLocation(8, 11), myTiles.tile1)
 })
 let mySprite = sprites.create(img`
     . . . f f f f f . . . . . 
@@ -76,6 +76,6 @@ let mySprite2 = sprites.create(img`
     . . c 6 1 1 1 1 1 7 6 6 c c . . 
     . . . c c c c c c c c c c . . . 
     `, SpriteKind.Player)
-tiles.placeOnRandomTile(mySprite2, sprites.dungeon.floorDarkDiamond)
-tiles.placeOnRandomTile(mySprite, sprites.dungeon.floorLight2)
+tiles.placeOnRandomTile(mySprite2, myTiles.tile1)
+tiles.placeOnRandomTile(mySprite, myTiles.tile1)
 mySprite2.follow(mySprite, 50)
